@@ -1,2 +1,2 @@
 # caesardecoder
-Un script de Python para usar como decodificador de cifrado César.
+Un script de Python para usar como codificador/decodificador de cifrado César.
