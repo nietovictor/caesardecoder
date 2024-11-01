@@ -23,6 +23,7 @@ desplazamientos = input("¿Quieres hacer todos los posibles desplazamientos? si/
 
 # Si quieres realizar todos los desplazamientos, se recorre un bucle para cada desplazamiento y se va imprimiendo cada palabra
 if desplazamientos == "si":
+    check_RAE = input("¿Quieres que saque las posibles soluciones al final (solo hacer con acceso a internet)? si/no")
     palabras_diccionario = []
 
     def check_word_in_rae(word, id):
@@ -43,7 +44,8 @@ if desplazamientos == "si":
             else:
                 palabra_descifrada += letra
         print(f"{i}. {palabra_descifrada}")
-        check_word_in_rae(palabra_descifrada, i)
+        if check_RAE == "si":
+            check_word_in_rae(palabra_descifrada, i)
 
     for palabra in palabras_diccionario:
         print(f"\n{palabra[0]} es posiblemente la respuesta con {palabra[1]} rotaciones")
